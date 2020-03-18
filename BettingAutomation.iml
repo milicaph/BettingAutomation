@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://E:/projekti - arh/jars and driver betting/byte-buddy-1.8.15.jar!/" />
+          <root url="jar://E:/projekti - arh/jars and driver betting/cglib-nodep-3.2.4.jar!/" />
+          <root url="jar://E:/projekti - arh/jars and driver betting/client-combined-3.141.59.jar!/" />
+          <root url="jar://E:/projekti - arh/jars and driver betting/commons-codec-1.10.jar!/" />
+          <root url="jar://E:/projekti - arh/jars and driver betting/commons-exec-1.3.jar!/" />
+          <root url="jar://E:/projekti - arh/jars and driver betting/commons-logging-1.2.jar!/" />
+          <root url="jar://E:/projekti - arh/jars and driver betting/gson-2.8.0.jar!/" />
+          <root url="jar://E:/projekti - arh/jars and driver betting/guava-21.0.jar!/" />
+          <root url="jar://E:/projekti - arh/jars and driver betting/guava-25.0-jre.jar!/" />
+          <root url="jar://E:/projekti - arh/jars and driver betting/hamcrest-core-1.3.jar!/" />
+          <root url="jar://E:/projekti - arh/jars and driver betting/httpclient-4.5.3.jar!/" />
+          <root url="jar://E:/projekti - arh/jars and driver betting/httpcore-4.4.6.jar!/" />
+          <root url="jar://E:/projekti - arh/jars and driver betting/jna-4.1.0.jar!/" />
+          <root url="jar://E:/projekti - arh/jars and driver betting/jna-platform-4.1.0.jar!/" />
+          <root url="jar://E:/projekti - arh/jars and driver betting/junit-4.12.jar!/" />
+          <root url="jar://E:/projekti - arh/jars and driver betting/okhttp-3.11.0.jar!/" />
+          <root url="jar://E:/projekti - arh/jars and driver betting/okio-1.14.0.jar!/" />
+          <root url="jar://E:/projekti - arh/jars and driver betting/selenium-api-3.4.0.jar!/" />
+          <root url="jar://E:/projekti - arh/jars and driver betting/selenium-remote-driver-3.4.0.jar!/" />
+          <root url="jar://E:/projekti - arh/jars and driver betting/selenium-server-standalone-3.141.59.jar!/" />
+          <root url="jar://E:/projekti - arh/jars and driver betting/selenium-support-3.4.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://E:/projekti - arh/jars and driver betting/client-combined-3.141.59-sources.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://E:/ckola/testng/jcommander-1.72.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://E:/ckola/testng/testng-7.0.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://E:/ckola/jdbc - mysql/mysql-connector-java-8.0.19.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://E:/ckola/jdbc - mysql/protobuf-java-3.6.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://E:/ckola/time/scala-java-time_sjs0.6_2.11-2.0.0-RC5.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+  </component>
+</module>

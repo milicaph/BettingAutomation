@@ -1,0 +1,4 @@
+[ERROR] 2020-03-19 21:14:36.139 [main] Main - java.lang.ArithmeticException: / by zero
+[ERROR] 2020-03-19 21:17:22.577 [main] Main - java.lang.ArithmeticException: / by zero
+[ERROR] 2020-03-19 21:19:14.348 [main] Main - java.lang.ArithmeticException: / by zero
+[ERROR] 2020-03-19 21:20:55.471 [main] Main - java.lang.ArithmeticException: / by zero

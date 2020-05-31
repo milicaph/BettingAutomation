@@ -1,29 +1,53 @@
-[ERROR] 2020-03-19 21:23:31.440 [main] Main - java.lang.ArithmeticException: / by zero
-[ERROR] 2020-03-20 07:46:44.606 [main] Main - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for login.tiketi.TiketSoccerbet$1@27f74733 (tried for 60 second(s) with 500 milliseconds interval)
+[ERROR] 2020-03-30 09:35:48.447 [main] Main - Main.java:51>>main()
+[ERROR] 2020-03-30 09:39:53.219 [main] Main - Main.java:51>>main()
+[ERROR] 2020-03-30 09:54:18.761 [main] Main - Main.java:51>>main()
+[ERROR] 2020-03-30 14:42:27.606 [main] Main - Main.java:51>>main()
+[ERROR] 2020-03-30 15:03:50.484 [main] Main - Main.java:51>>main()
+[ERROR] 2020-03-30 21:04:08.778 [main] LogInSoccerbet - java.lang.NullPointerException caught at:  login.tiketi.LogInSoccerbet.loginToSoccerbet(LogInSoccerbet.java:49)
+auto.betting.Main.main(Main.java:49)
+[ERROR] 2020-03-30 21:07:48.757 [main] LogInSoccerbet - java.lang.NullPointerException caught at:  login.tiketi.LogInSoccerbet.loginToSoccerbet(LogInSoccerbet.java:49)
+auto.betting.Main.main(Main.java:49)
+[ERROR] 2020-03-30 21:08:03.970 [main] Main - Main.java:51>>main()
+[ERROR] 2020-03-30 21:10:17.496 [main] LogInSoccerbet - java.lang.NullPointerException caught at:  login.tiketi.LogInSoccerbet.loginToSoccerbet(LogInSoccerbet.java:49)
+auto.betting.Main.main(Main.java:49)
+[ERROR] 2020-03-30 21:10:32.731 [main] Main - Main.java:51>>main()auto.betting.Main.main(Main.java:51)
+[ERROR] 2020-03-30 21:37:29.525 [main] TiketSoccerbet - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[FirefoxDriver: firefox on WINDOWS (d8119e3f-e95d-4320-b3ab-096b3662d378)] -> css selector: a[class*=next]] (tried for 30 second(s) with 500 milliseconds interval)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-E278QCN', ip: '192.168.0.12', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 73.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200217142647, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 9716, moz:profile: C:\Users\Milica\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 1531b78a-8b86-4b8c-ac80-18cfe238b8a0
-[ERROR] 2020-03-20 07:49:17.628 [main] Main - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for login.tiketi.TiketSoccerbet$1@5116ac09 (tried for 60 second(s) with 500 milliseconds interval)
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 73.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200217142647, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 20716, moz:profile: C:\Users\Milica\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: d8119e3f-e95d-4320-b3ab-096b3662d378 caught at:  login.tiketi.TiketSoccerbet.placeTiket(TiketSoccerbet.java:134)
+auto.betting.Main.main(Main.java:54)
+[ERROR] 2020-03-30 21:37:59.450 [main] TiketMozzartbet - org.openqa.selenium.NoSuchElementException: Timed out after 15 seconds. Unable to locate the element caught at:  login.tiketi.TiketMozzartbet.placeTiket(TiketMozzartbet.java:124)
+auto.betting.Main.main(Main.java:69)
+[ERROR] 2020-03-30 21:49:55.324 [main] TiketSoccerbet - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[FirefoxDriver: firefox on WINDOWS (19d9549f-f813-47fd-abc1-aba85ef85c0a)] -> css selector: a[class*=next]] (tried for 30 second(s) with 500 milliseconds interval)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-E278QCN', ip: '192.168.0.12', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 73.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200217142647, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 11272, moz:profile: C:\Users\Milica\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: c4191c76-d3eb-4883-9100-51e775758acf
-[ERROR] 2020-03-20 07:50:31.093 [main] Main - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: a.pairs (tried for 60 second(s) with 500 milliseconds interval)
-[ERROR] 2020-03-20 07:50:40.322 [main] Main - org.openqa.selenium.ElementClickInterceptedException: Element <button class="accept-cookies-button"> is not clickable at point (1188,712) because another element <div class="loader"> obscures it
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 73.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200217142647, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 19420, moz:profile: C:\Users\Milica\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 19d9549f-f813-47fd-abc1-aba85ef85c0a caught at:  login.tiketi.TiketSoccerbet.placeTiket(TiketSoccerbet.java:134)
+auto.betting.Main.main(Main.java:54)
+[ERROR] 2020-03-30 21:50:23.806 [main] TiketMozzartbet - org.openqa.selenium.NoSuchElementException: Timed out after 15 seconds. Unable to locate the element caught at:  login.tiketi.TiketMozzartbet.placeTiket(TiketMozzartbet.java:124)
+auto.betting.Main.main(Main.java:69)
+[ERROR] 2020-03-30 21:51:33.362 [main] TiketAdmiralbet - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: AjaxElementLocator 'By.xpath: //html/body/main-app/div/div[1]/div[2]/ticket/div[1]/div[2]/div/div[2]/div[1]/ticket-single/div/div[3]/button' (tried for 30 second(s) with 500 milliseconds interval) caught at:  login.tiketi.TiketAdmiralbet.placeBet(TiketAdmiralbet.java:179)
+auto.betting.Main.main(Main.java:104)
+[ERROR] 2020-03-30 21:52:57.760 [main] TiketMaxbet - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[FirefoxDriver: firefox on WINDOWS (19d9549f-f813-47fd-abc1-aba85ef85c0a)] -> css selector: div[class*=search-result]] (tried for 30 second(s) with 500 milliseconds interval)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-E278QCN', ip: '192.168.0.12', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 73.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200217142647, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 11272, moz:profile: C:\Users\Milica\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: c4191c76-d3eb-4883-9100-51e775758acf
-[ERROR] 2020-03-20 07:59:25.564 [main] Main - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: AjaxElementLocator 'By.xpath: //html/body/main-app/div/div[1]/div[2]/ticket/div[1]/div[2]/div/div[2]/div[1]/ticket-single/div/div[3]/button' (tried for 60 second(s) with 500 milliseconds interval)
-[ERROR] 2020-03-20 12:01:27.941 [main] Main - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: div.search-result.pos-full-width.ng-scope (tried for 60 second(s) with 500 milliseconds interval)
-[ERROR] 2020-03-20 12:12:12.065 [main] Main - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: div.search-result.pos-full-width.ng-scope (tried for 60 second(s) with 500 milliseconds interval)
-[ERROR] 2020-03-20 12:17:28.758 [main] Main - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: div.search-result.pos-full-width.ng-scope (tried for 60 second(s) with 500 milliseconds interval)
-[ERROR] 2020-03-20 12:35:25.268 [main] Main - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: div.search-result.pos-full-width.ng-scope (tried for 30 second(s) with 500 milliseconds interval)
-[ERROR] 2020-03-20 12:40:42.954 [main] Main - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: div.search-result.pos-full-width.ng-scope (tried for 30 second(s) with 500 milliseconds interval)
-[ERROR] 2020-03-20 12:43:24.134 [main] Main - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: div.search-result.pos-full-width.ng-scope (tried for 30 second(s) with 500 milliseconds interval)
-[ERROR] 2020-03-20 12:45:37.123 [main] Main - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: div.search-result.pos-full-width.ng-scope (tried for 30 second(s) with 500 milliseconds interval)
-[ERROR] 2020-03-20 12:47:05.610 [main] Main - org.openqa.selenium.NoSuchElementException: Timed out after 15 seconds. Unable to locate the element
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 73.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200217142647, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 19420, moz:profile: C:\Users\Milica\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 19d9549f-f813-47fd-abc1-aba85ef85c0a caught at:  login.tiketi.TiketMaxbet.placeTiket(TiketMaxbet.java:153)
+auto.betting.Main.main(Main.java:122)
+[ERROR] 2020-03-30 21:53:26.014 [main] TiketMelbet - org.openqa.selenium.NoSuchElementException: Timed out after 15 seconds. Unable to locate the element caught at:  login.tiketi.TiketMelbet.placeTiket(TiketMelbet.java:102)
+auto.betting.Main.main(Main.java:137)
+[ERROR] 2020-03-30 21:54:06.876 [main] Tiket365bet - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of any elements located by By.cssSelector: span[class*=SiteSearchLabelOnlyParticipant_Name] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-E278QCN', ip: '192.168.0.12', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 73.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200217142647, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 19420, moz:profile: C:\Users\Milica\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 19d9549f-f813-47fd-abc1-aba85ef85c0a caught at:  login.tiketi.Tiket365bet.placeTiket(Tiket365bet.java:140)
+auto.betting.Main.main(Main.java:152)
+[ERROR] 2020-03-30 21:54:56.066 [main] LogInCircuscasino - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //input[contains(@id, 'passwordInput')] (tried for 30 second(s) with 500 milliseconds interval) caught at:  login.tiketi.LogInCircuscasino.loginToCircuscasino(LogInCircuscasino.java:65)
+auto.betting.Main.main(Main.java:168)
+[ERROR] 2020-03-30 21:55:32.319 [main] TiketCircuscasino - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: a.go-back (tried for 30 second(s) with 500 milliseconds interval) caught at:  login.tiketi.TiketCircuscasino.placeTiket(TiketCircuscasino.java:149)
+auto.betting.Main.main(Main.java:170)

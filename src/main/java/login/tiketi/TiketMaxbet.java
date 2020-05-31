@@ -1,5 +1,7 @@
 package login.tiketi;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
@@ -10,9 +12,13 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
 public class TiketMaxbet {
+    private Logger logger = LogManager.getLogger(TiketMaxbet.class);
     private WebDriver driver;
     private WebDriverWait wait;
 
@@ -75,68 +81,81 @@ public class TiketMaxbet {
     }
 
     public void placeTiket(String domacinIzBaze, String gostIzBaze, String tipIzBaze) {
-        wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.cssSelector("input[class*=login-button]"))));
-        wait.until(ExpectedConditions.attributeContains(By.cssSelector("div[class*=popup-profile-button]"), "innerHTML", "Oliver"));
 
-       // wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.cssSelector("div[href*=casino]"))));
-        findPair(domacinIzBaze);
-        try{ Thread.sleep(1000); } catch (Exception e) { System.out.println(e); }
-        System.out.println(driver.findElement(By.cssSelector("div[class*=search-result]")).getAttribute("innerHTML"));
-        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.cssSelector("div[class*=search-result]"))));
-        wait.until(ExpectedConditions.attributeContains(driver.findElement(By.cssSelector("div[class*=search-result]")), "innerHTML", gostIzBaze));
-        //try{ Thread.sleep(1500); } catch (Exception e) { System.out.println(e); }
-        this.hosts = getHosts();
-        System.out.print(hosts + " ----> domacini");
-        //this.bets = getBets();
+        try {
+            wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.cssSelector("input[class*=login-button]"))));
+            wait.until(ExpectedConditions.attributeContains(By.cssSelector("div[class*=popup-profile-button]"), "innerHTML", "Oliver"));
 
 
-        for(WebElement mozhost : this.hosts) {
-            wait.until(ExpectedConditions.visibilityOf(mozhost));
-            //driver.get("https://www.maxbet.rs/bet/" + mozhost.getAttribute("href"));
-            String guestName = mozhost.getAttribute("innerHTML");
-           // System.out.println(guestName);
+            findPair(domacinIzBaze);
+            try {
+                Thread.sleep(1000);
+            } catch (Exception e) {
+                System.out.println(e);
+            }
 
-            if(!guestName.contains(gostIzBaze)) continue;
+            wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.cssSelector("div[class*=search-result]"))));
+            wait.until(ExpectedConditions.attributeContains(driver.findElement(By.cssSelector("div[class*=search-result]")), "innerHTML", gostIzBaze));
+            //try{ Thread.sleep(1500); } catch (Exception e) { System.out.println(e); }
+            this.hosts = getHosts();
+            //this.bets = getBets();
 
-            mozhost.click();
-            for(WebElement element : driver.findElements(By.cssSelector("div[class*=w-26]"))){
-                System.out.print(driver.findElements(By.cssSelector("div[class*=w-26]")));
 
-                if(element.getAttribute("innerHTML").contains(domacinIzBaze)){
-                    Actions builder = new Actions(driver);
-                    Action moveToPair = builder.moveToElement(element).doubleClick(element).build();
-                    moveToPair.perform();
-                    //element.click();
-                    break;
+            for (WebElement mozhost : this.hosts) {
+                //wait.until(ExpectedConditions.visibilityOf(mozhost));
+                //driver.get("https://www.maxbet.rs/bet/" + mozhost.getAttribute("href"));
+                String guestName = mozhost.getAttribute("innerHTML");
+                // System.out.println(guestName);
+
+                if (!guestName.contains(gostIzBaze)) {
+                    continue;
+                } else if (mozhost.getAttribute("innerHTML").contains(domacinIzBaze)) {
+                    //WebElement klikni = driver.findElement(By.cssSelector("div[class*=search-result]"));
+                    Actions action = new Actions(driver);
+                    action.moveToElement(mozhost).perform();
+                    try {
+                        Thread.sleep(2000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    action.doubleClick(mozhost).perform();
+                    mozhost.click();
+
+                }
+
+
+                //try{ Thread.sleep(5000); } catch (Exception e) { System.out.println(e); }
+
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                wait.until(ExpectedConditions.visibilityOfAllElements(driver.findElement(By.cssSelector("div[match-code=matchCode]"))));
+                this.bets = getBets();
+
+                if (guestName.contains(gostIzBaze) && tipIzBaze.equals("1")) {
+                    this.bets.get(0).click();
+                } else if (guestName.contains(gostIzBaze) && tipIzBaze.equals("X")) {
+                    this.bets.get(1).click();
+                } else if (guestName.contains(gostIzBaze) && tipIzBaze.equals("2")) {
+                    this.bets.get(2).click();
                 }
 
             }
 
-            //try{ Thread.sleep(5000); } catch (Exception e) { System.out.println(e); }
-            wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.cssSelector("div[class*=empty-msg]"))));
+            bettingAmount.clear();
+            bettingAmount.sendKeys("100");
 
-            this.bets = getBets();
+            //payTicket.click();
+            //wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/div[1]/section/section[3]/div/div[1]/section/section/section[2]/section/section/div/article/div/div[4]/button[1]")));
+            //confirmPay.click();
+        } catch(Exception e) { logger.error(e.fillInStackTrace() + " caught at:  " + Arrays.asList(e.getStackTrace())
+                .stream()
+                .map(Objects::toString)
+                .collect(Collectors.joining("\n"))); }
 
-            if(guestName.contains(gostIzBaze) && tipIzBaze.equals("1")){
-                this.bets.get(0).click();
-                break;
 
-            } else if(guestName.contains(gostIzBaze) && tipIzBaze.equals("X")){
-                this.bets.get(1).click();
-                break;
-
-            } else if(guestName.contains(gostIzBaze) && tipIzBaze.equals("2")){
-                this.bets.get(2).click();
-                break;
-
-            }
-        }
-        bettingAmount.sendKeys("100");
-
-        //payTicket.click();
-        //wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/div[1]/section/section[3]/div/div[1]/section/section/section[2]/section/section/div/article/div/div[4]/button[1]")));
-        //confirmPay.click();
-
-    }
+}
 
 }
